@@ -28,7 +28,6 @@ import time
 import webbrowser
 from pathlib import Path
 
-
 ROOT = Path(__file__).parent.absolute()
 VENV_DIR = ROOT / "venv"
 UI_DIR = ROOT / "ui"
@@ -158,9 +157,9 @@ def start_dev_server(port: int) -> tuple:
     """Start both Vite and FastAPI in development mode."""
     venv_python = get_venv_python()
 
-    print(f"\n  Starting development servers...")
+    print("\n  Starting development servers...")
     print(f"  - FastAPI backend: http://127.0.0.1:{port}")
-    print(f"  - Vite frontend:   http://127.0.0.1:5173")
+    print("  - Vite frontend:   http://127.0.0.1:5173")
 
     # Start FastAPI
     backend = subprocess.Popen([
