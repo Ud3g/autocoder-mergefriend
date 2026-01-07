@@ -1,11 +1,11 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-# Autonomous Coder UI Launcher for Unix/Linux/macOS
+# AutoCoder UI Launcher for Unix/Linux/macOS
 # This script launches the web UI for the autonomous coding agent.
 
 echo ""
 echo "===================================="
-echo "  Autonomous Coder UI"
+echo "  AutoCoder UI"
 echo "===================================="
 echo ""
 

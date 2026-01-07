@@ -1,11 +1,11 @@
 @echo off
 cd /d "%~dp0"
-REM Autonomous Coder UI Launcher for Windows
+REM AutoCoder UI Launcher for Windows
 REM This script launches the web UI for the autonomous coding agent.
 
 echo.
 echo ====================================
-echo   Autonomous Coder UI
+echo   AutoCoder UI
 echo ====================================
 echo.
 
