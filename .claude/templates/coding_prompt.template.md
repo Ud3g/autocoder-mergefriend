@@ -101,6 +101,33 @@ Get the next feature to implement:
 Use the feature_get_next tool
 ```
 
+**IMPORTANT - PROJECT COMPLETION:** If `feature_get_next` returns:
+```json
+{"error": "All features are passing! No more work to do."}
+```
+
+This means **the project is complete!** Take these final steps:
+
+1. **Write final summary** to `claude-progress.txt`:
+   - Note that all features are implemented
+   - List any remaining recommendations
+   - Include final completion statistics
+
+2. **Perform one final verification** (optional):
+   - Test 2-3 core features to ensure app is stable
+   - Check for console errors
+   - Verify app is production-ready
+
+3. **Commit final state**:
+   ```bash
+   git add -A
+   git commit -m "chore: All features complete - project production-ready"
+   ```
+
+4. **End session gracefully** - Do NOT continue with more regression tests. The agent loop will automatically stop when it detects completion.
+
+---
+
 Once you've retrieved the feature, **immediately mark it as in-progress**:
 
 ```

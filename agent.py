@@ -23,7 +23,7 @@ if sys.platform == "win32":
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 from client import create_client
-from progress import has_features, print_progress_summary, print_session_header
+from progress import has_features, is_project_complete, print_progress_summary, print_session_header
 from prompts import (
     copy_spec_to_project,
     get_coding_prompt,
@@ -198,6 +198,16 @@ async def run_autonomous_agent(
 
         # Handle status
         if status == "continue":
+            # Check if project is complete (all features passing)
+            if is_project_complete(project_dir):
+                print("\n" + "=" * 70)
+                print("  ALL FEATURES COMPLETE!")
+                print("=" * 70)
+                print("\nAll features have been implemented and verified.")
+                print("Project is production-ready!")
+                print("\nThe agent will now stop to avoid unnecessary token usage.")
+                break  # Exit the loop - project is complete
+
             delay_seconds = AUTO_CONTINUE_DELAY_SECONDS
             target_time_str = None
 
