@@ -105,8 +105,6 @@ Features are stored in SQLite via SQLAlchemy and managed through an MCP server t
 - `feature_skip` - Move feature to end of queue
 - `feature_create_bulk` - Initialize all features (used by initializer)
 - `feature_create` - Create a single feature
-- `feature_update` - Edit feature details
-- `feature_delete` - Remove a feature
 
 ### Project Assistant
 
@@ -114,7 +112,7 @@ The Web UI includes a **Project Assistant** - an AI-powered chat interface for e
 
 **Capabilities:**
 - **Explore the codebase** - Ask questions about files, architecture, and implementation details
-- **Manage features** - Create, edit, delete, and reorder features via natural language
+- **Manage features** - Create new features and deprioritize (skip) existing ones via natural language
 - **Get feature details** - Ask about specific features, their status, and test steps
 
 **Conversation Persistence:**

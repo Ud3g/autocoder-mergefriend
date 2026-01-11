@@ -273,7 +273,7 @@ class AssistantChatSession:
         # Send initial greeting (unless resuming)
         if not skip_greeting:
             try:
-                greeting = f"Hello! I'm your project assistant for **{self.project_name}**. I can help you understand the codebase, manage features (create, edit, delete, reorder), and answer questions about the project. What would you like to do?"
+                greeting = f"Hello! I'm your project assistant for **{self.project_name}**. I can help you understand the codebase, manage features (create and deprioritize), and answer questions about the project. What would you like to do?"
 
                 # Store the greeting in the database
                 add_message(self.project_dir, self.conversation_id, "assistant", greeting)
